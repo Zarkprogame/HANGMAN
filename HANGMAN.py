@@ -1,6 +1,8 @@
 import random
 import os
 
+os.system('cls')
+
 titulo = """
 **   **    ***    **   **  *******   **      **    ***    **   **      *****   **  **      *******    ***    ******  **  **
 **   **   ** **   ***  **  **        ***    ***   ** **   ***  **      **   *  **  **          ***   ** **   **   *  ** **
@@ -8,9 +10,43 @@ titulo = """
 **   **  **   **  ** ****  **   **   ** **** **  **   **  ** ****      **   *    **        ***      **   **  **  *   ** **
 **   **  **   **  **   **  *******   **  **  **  **   **  **   **      *****     **        *******  **   **  **   *  **  **
 """
+animals = './archivos/animals.txt'
+colors = './archivos/colors.txt'
+animes = './archivos/animes.txt'
+mangas = './archivos/mangas.txt'
 
+print(titulo)
+
+print("""
+-----GAMEMODES----
+
+    1 for animals
+    2 for colors
+    3 for animes
+    4 for mangas or manhwas
+""")
+
+############################   MIRAR LETRAS Y NUMEROS NO CONTEMPLADOS #########################################
+while True:
+    gamemode = input('Choose your Gamemode: ')
+
+    if gamemode == '1':
+        choice = animals
+    elif gamemode == '2':
+        choice = colors
+    elif gamemode == '3':
+        choice = animes
+    elif gamemode == '4':
+        choice = mangas
+    else:
+        print('Only have these options')
+    break
+
+#####################################################################################################################
+###############  1. agregar pistas para animes y mangas
+###############  2. ponerle oportunidades, con dibujos ASCI en GitHub
 words = []
-with open('./archivos/data.txt', 'r' , encoding='utf-8') as f:
+with open(choice, 'r' , encoding='utf-8') as f:
     for line in f:
         words.append(line)
 word = random.choice(words)

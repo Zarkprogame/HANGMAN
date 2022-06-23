@@ -1,0 +1,12 @@
+elefante
+serpiente
+hipopotamo
+mono
+buho
+gorila
+caballo
+ballena
+perro
+gato
+leon
+tigre
