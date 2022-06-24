@@ -17,7 +17,7 @@ mangas = './archivos/mangas.txt'
 
 print(titulo)
 
-print("""
+game = ("""
 -----GAMEMODES----
 
     1 for animals
@@ -25,6 +25,8 @@ print("""
     3 for animes
     4 for mangas or manhwas
 """)
+
+print(game)
 
 ############################   MIRAR LETRAS Y NUMEROS NO CONTEMPLADOS #########################################
 while True:
@@ -39,9 +41,12 @@ while True:
     elif gamemode == '4':
         choice = mangas
     else:
-        print('Only have these options')
+        os.system('cls')
+        print(titulo)
+        print(game)
+        print('Only have these options')     
+        continue
     break
-
 #####################################################################################################################
 ###############  1. agregar pistas para animes y mangas
 ###############  2. ponerle oportunidades, con dibujos ASCI en GitHub
